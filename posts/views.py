@@ -9,7 +9,7 @@ from .serializers import PostSerializer
 class PostListAPIView(generics.ListCreateAPIView):
 
     # view-level permissions
-    permission_classes = (permissions.IsAuthenticated,)
+    # permission_classes = (permissions.IsAuthenticated,)
 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -18,7 +18,7 @@ class PostListAPIView(generics.ListCreateAPIView):
 class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     # view-level permissions
-    permission_classes = (permissions.IsAuthenticated,)
+    # permission_classes = (permissions.IsAuthenticated,)
 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
